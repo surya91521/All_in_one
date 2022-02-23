@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.All_in_One">
         <activity
+            android:name=".BiometricPromptActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
