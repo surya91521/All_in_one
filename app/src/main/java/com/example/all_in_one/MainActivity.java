@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.all_in_one.FingerPrintManager.FingerPrintManager;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -19,6 +21,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, BiometricPromptActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button manager = (Button) findViewById(R.id.FPManager);
+        manager.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, FingerPrintManager.class);
                 startActivity(intent);
             }
         });
