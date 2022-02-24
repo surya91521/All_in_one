@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_biometric_prompt.xml" value="0.271286231884058" />
+        <entry key="app/src/main/res/layout/activity_camera_intent.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_finger_print_manager.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
       </map>

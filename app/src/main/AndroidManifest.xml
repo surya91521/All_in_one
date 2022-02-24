@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.All_in_One">
         <activity
-            android:name=".FingerPrintManager.FingerPrintManager"
+            android:name=".CameraIntent"
             android:exported="false" />
         <activity
             android:name=".BiometricPromptActivity"
