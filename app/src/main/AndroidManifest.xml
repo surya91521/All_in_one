@@ -15,6 +15,9 @@
             android:name=".CameraIntent"
             android:exported="false" />
         <activity
+            android:name=".FingerPrintManager.FingerPrintManager"
+            android:exported="false" />
+        <activity
             android:name=".BiometricPromptActivity"
             android:exported="false" />
         <activity
