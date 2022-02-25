@@ -43,5 +43,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button camera2 = (Button) findViewById(R.id.camera2);
+        camera2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Camera2Api.class);
+                startActivity(intent);
+            }
+        });
     }
 }

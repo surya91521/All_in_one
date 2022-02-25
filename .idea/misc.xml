@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_biometric_prompt.xml" value="0.271286231884058" />
+        <entry key="app/src/main/res/layout/activity_camera2_api.xml" value="0.21240942028985507" />
         <entry key="app/src/main/res/layout/activity_camera_intent.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_finger_print_manager.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
@@ -15,5 +16,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.335" />
+      </ProjectState>
+    </option>
   </component>
 </project>
