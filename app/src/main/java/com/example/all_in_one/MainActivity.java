@@ -70,5 +70,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button keyGenParam = (Button) findViewById(R.id.keyparam);
+        keyGenParam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, KeyGenParamBiometric.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }
