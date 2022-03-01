@@ -17,9 +17,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.All_in_One">
         <activity
-            android:name=".Camera1Bar"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:name=".KeyGenParamBiometric"
             android:exported="false" />
+        <activity
+            android:name=".Camera1Bar"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".CameraApi"
             android:exported="false" />
