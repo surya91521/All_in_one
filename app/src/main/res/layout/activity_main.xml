@@ -85,11 +85,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/bio_prompt" />
 
             <Button
-                android:id="@+id/camera2Bar"
+                android:id="@+id/cameraX"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Camera 2 Barcode and QR scanner"
+                android:text="CameraX API"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/keyparam" />
