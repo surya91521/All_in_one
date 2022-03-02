@@ -6,8 +6,13 @@
         <entry key="app/src/main/res/layout/activity_biometric_prompt.xml" value="0.271286231884058" />
         <entry key="app/src/main/res/layout/activity_camera1_bar.xml" value="0.23777173913043478" />
         <entry key="app/src/main/res/layout/activity_camera2_api.xml" value="0.21240942028985507" />
+        <entry key="app/src/main/res/layout/activity_camera2_bar.xml" value="0.23324275362318841" />
         <entry key="app/src/main/res/layout/activity_camera_api.xml" value="0.24375" />
         <entry key="app/src/main/res/layout/activity_camera_intent.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_camera_x.xml" value="0.23324275362318841" />
+        <entry key="app/src/main/res/layout/activity_camera_xactivity.xml" value="0.2296195652173913" />
+        <entry key="app/src/main/res/layout/activity_camera_xapi.xml" value="0.14739583333333334" />
+        <entry key="app/src/main/res/layout/activity_camerax_api.xml" value="0.2296195652173913" />
         <entry key="app/src/main/res/layout/activity_finger_print_manager.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_key_gen_param_biometric.xml" value="0.23324275362318841" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
