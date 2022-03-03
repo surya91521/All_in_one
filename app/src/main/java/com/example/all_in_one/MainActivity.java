@@ -89,6 +89,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button cameraZxing = (Button) findViewById(R.id.zxing);
+        cameraZxing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CameraZxing.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

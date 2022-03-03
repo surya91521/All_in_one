@@ -137,9 +137,6 @@ public class CameraxApi extends AppCompatActivity {
 
     }
 
-    public String getBatchDirectoryName() {
-        return Environment.getExternalStorageDirectory().toString();
-    }
 
     private boolean allPermissionsGranted(){
 
