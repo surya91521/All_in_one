@@ -2,6 +2,7 @@ package com.example.all_in_one;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.biometric.BiometricManager;
 import androidx.biometric.BiometricPrompt;
 import androidx.core.content.ContextCompat;
 
@@ -22,10 +23,49 @@ public class BiometricPromptActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_biometric_prompt);
 
+
         executor = ContextCompat.getMainExecutor(this);
-        biometricPrompt = new BiometricPrompt(BiometricPromptActivity.this,
-                executor, new BiometricPrompt.AuthenticationCallback() {
-            @Override
+        biometricPrompt = new BiometricPrompt(BiometricPromptActivity.this, executor, callback);
+
+        Button biometricLoginButton = findViewById(R.id.prompt);
+        biometricLoginButton.setOnClickListener(view -> {
+            checkAndAuthenticate();
+        });
+    }
+
+    private void checkAndAuthenticate(){
+        BiometricManager biometricManager=BiometricManager.from(this);
+        switch (biometricManager.canAuthenticate())
+        {
+            case BiometricManager.BIOMETRIC_SUCCESS:
+                promptInfo = buildBiometricPrompt();
+                biometricPrompt.authenticate(promptInfo);
+                break;
+            case BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE:
+                Toast.makeText(getApplicationContext(),"Biometric Authentication currently unavailable", Toast.LENGTH_SHORT).show();
+                break;
+            case BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE:
+                Toast.makeText(getApplicationContext(),"Your device doesn't support Biometric Authentication", Toast.LENGTH_SHORT).show();
+                break;
+            case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:
+                Toast.makeText(getApplicationContext(),"Your device doesn't have any fingerprint enrolled", Toast.LENGTH_SHORT).show();
+                break;
+        }
+    }
+
+    private BiometricPrompt.PromptInfo buildBiometricPrompt()
+    {
+        return new BiometricPrompt.PromptInfo.Builder()
+            .setTitle("Biometric login for my app")
+            .setSubtitle("Log in using your biometric credential")
+            .setDeviceCredentialAllowed(true)
+            .build();
+
+    }
+
+    private BiometricPrompt.AuthenticationCallback callback=new
+            BiometricPrompt.AuthenticationCallback() {
+                @Override
             public void onAuthenticationError(int errorCode,
                                               @NonNull CharSequence errString) {
                 super.onAuthenticationError(errorCode, errString);
@@ -49,20 +89,5 @@ public class BiometricPromptActivity extends AppCompatActivity {
                         Toast.LENGTH_SHORT)
                         .show();
             }
-        });
-
-        promptInfo = new BiometricPrompt.PromptInfo.Builder()
-                .setTitle("Biometric login for my app")
-                .setSubtitle("Log in using your biometric credential")
-                .setNegativeButtonText("Use account password")
-                .build();
-
-        // Prompt appears when user clicks "Log in".
-        // Consider integrating with the keystore to unlock cryptographic operations,
-        // if needed by your app.
-        Button biometricLoginButton = findViewById(R.id.prompt);
-        biometricLoginButton.setOnClickListener(view -> {
-            biometricPrompt.authenticate(promptInfo);
-        });
-    }
+    };
 }
