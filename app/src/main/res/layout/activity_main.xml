@@ -20,24 +20,26 @@
                 android:layout_marginTop="20dp"
                 android:text="Biometric Prompt"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/camera1Bar" />
+                app:layout_constraintTop_toBottomOf="@+id/cameraX" />
 
             <Button
                 android:id="@+id/camera1Bar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="37dp"
+                android:layout_marginTop="20dp"
                 android:text="Camera1 Barcode and QR"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/camera1" />
+                app:layout_constraintTop_toBottomOf="@+id/FPManager" />
 
             <Button
                 android:id="@+id/camera1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="20dp"
                 android:text="Camera1 ApI"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -47,21 +49,21 @@
                 android:id="@+id/camintent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="20dp"
                 android:text="Camera Intent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/camera2" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Button
                 android:id="@+id/camera2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="23dp"
+                android:layout_marginTop="20dp"
                 android:text="Camera2 ApI"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/FPManager" />
+                app:layout_constraintTop_toBottomOf="@+id/camera1" />
 
             <Button
                 android:id="@+id/FPManager"
@@ -72,7 +74,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/keyparam" />
 
             <Button
                 android:id="@+id/keyparam"
@@ -91,8 +93,19 @@
                 android:layout_marginTop="20dp"
                 android:text="CameraX API"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/keyparam" />
+                app:layout_constraintTop_toBottomOf="@+id/camera2" />
+
+            <Button
+                android:id="@+id/zxing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Zxing Barcode and QRcode Scanner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/camera1Bar" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

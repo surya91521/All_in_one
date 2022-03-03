@@ -17,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.All_in_One">
         <activity
+            android:name=".CameraZxing"
+            android:exported="false" />
+        <activity
             android:name=".CameraxApi"
             android:exported="false" />
         <activity
