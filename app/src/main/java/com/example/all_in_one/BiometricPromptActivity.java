@@ -38,6 +38,7 @@ public class BiometricPromptActivity extends AppCompatActivity {
         switch (biometricManager.canAuthenticate())
         {
             case BiometricManager.BIOMETRIC_SUCCESS:
+            case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:
                 promptInfo = buildBiometricPrompt();
                 biometricPrompt.authenticate(promptInfo);
                 break;
@@ -46,9 +47,6 @@ public class BiometricPromptActivity extends AppCompatActivity {
                 break;
             case BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE:
                 Toast.makeText(getApplicationContext(),"Your device doesn't support Biometric Authentication", Toast.LENGTH_SHORT).show();
-                break;
-            case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:
-                Toast.makeText(getApplicationContext(),"Your device doesn't have any fingerprint enrolled", Toast.LENGTH_SHORT).show();
                 break;
         }
     }

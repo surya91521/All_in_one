@@ -1,8 +1,5 @@
 package com.example.all_in_one;
 
-import static androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_STRONG;
-import static androidx.biometric.BiometricManager.Authenticators.DEVICE_CREDENTIAL;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
@@ -10,12 +7,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.biometric.BiometricManager;
 import androidx.biometric.BiometricPrompt;
 
-import android.content.Intent;
+
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.provider.Settings;
 import android.security.keystore.KeyGenParameterSpec;
 import android.security.keystore.KeyProperties;
 import android.util.Base64;
@@ -24,29 +20,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import java.io.IOException;
-import java.security.InvalidAlgorithmParameterException;
-import java.security.InvalidKeyException;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.KeyStore;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
-import java.security.NoSuchProviderException;
 import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.security.Signature;
 import java.security.SignatureException;
-import java.security.UnrecoverableKeyException;
-import java.security.cert.CertificateException;
 import java.security.spec.ECGenParameterSpec;
 import java.util.UUID;
 import java.util.concurrent.Executor;
 
-import javax.crypto.Cipher;
-import javax.crypto.KeyGenerator;
-import javax.crypto.NoSuchPaddingException;
-import javax.crypto.SecretKey;
 
 public class KeyGenParamBiometric extends AppCompatActivity {
 
