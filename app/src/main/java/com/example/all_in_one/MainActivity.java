@@ -1,13 +1,22 @@
 package com.example.all_in_one;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.KeyguardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import com.example.all_in_one.FingerPrintManager.FingerPrintManager;
+
+import java.util.Calendar;
+import java.util.Date;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
         Button camIntent = (Button) findViewById(R.id.camintent);
         camIntent.setOnClickListener(new View.OnClickListener() {
@@ -98,5 +108,29 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button camera2Bar = (Button) findViewById(R.id.camera2bar);
+        camera2Bar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Camera2Bar.class);
+                startActivity(intent);
+            }
+        });
+
+        Date currentTime = Calendar.getInstance().getTime();
+        getSupportActionBar().setTitle(currentTime.toString());
+        releaseScreenLock(MainActivity.this);
+    }
+
+    public void releaseScreenLock(Context context) {
+
+        Window window = this.getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
+        window.addFlags(WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
+        window.addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
+
+        KeyguardManager mKeyGuardManager = (KeyguardManager) getSystemService(KEYGUARD_SERVICE);
+        KeyguardManager.KeyguardLock mLock = mKeyGuardManager.newKeyguardLock("Unlock");
+        mLock.disableKeyguard();
     }
 }
