@@ -9,6 +9,7 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class CameraIntent extends AppCompatActivity {
 
@@ -38,13 +39,14 @@ public class CameraIntent extends AppCompatActivity {
 
     }
 
-    protected void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
+        super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == pic_id) {
 
-            Bitmap photo = (Bitmap)data.getExtras().get("data");
+            Bitmap photo = (Bitmap) data.getExtras().get("data");
             click_image_id.setImageBitmap(photo);
+            Toast.makeText(CameraIntent.this, "Image clicked Successfully", Toast.LENGTH_SHORT).show();
         }
     }
 }

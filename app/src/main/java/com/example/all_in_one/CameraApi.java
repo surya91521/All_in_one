@@ -50,6 +50,7 @@ public class CameraApi extends AppCompatActivity {
                 FileOutputStream fos = new FileOutputStream(pictureFile);
                 fos.write(data);
                 fos.close();
+                Toast.makeText(CameraApi.this, "Image clicked Successfully", Toast.LENGTH_SHORT).show();
             } catch (FileNotFoundException e) {
                 Log.d(TAG, "File not found: " + e.getMessage());
             } catch (IOException e) {
