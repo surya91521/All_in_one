@@ -117,6 +117,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button cameraIntent = (Button) findViewById(R.id.uri);
+        cameraIntent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CameraUri.class);
+                intent.putExtra("uri", true);
+                startActivity(intent);
+            }
+        });
+
         Date currentTime = Calendar.getInstance().getTime();
         getSupportActionBar().setTitle(currentTime.toString());
         releaseScreenLock(MainActivity.this);
