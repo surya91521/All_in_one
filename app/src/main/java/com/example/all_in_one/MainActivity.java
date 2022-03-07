@@ -128,11 +128,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Date currentTime = Calendar.getInstance().getTime();
-        getSupportActionBar().setTitle(currentTime.toString());
+        getSupportActionBar().setTitle(currentTime.toString());   // to get the current timezone of the device
         releaseScreenLock(MainActivity.this);
     }
 
-    public void releaseScreenLock(Context context) {
+    public void releaseScreenLock(Context context) {  
 
         Window window = this.getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);

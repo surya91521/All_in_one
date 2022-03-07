@@ -40,8 +40,6 @@ public class KeyGenParamBiometric extends AppCompatActivity {
 
     // Unique identifier of a key pair
     private static final String KEY_NAME = UUID.randomUUID().toString();
-
-    private int REQUEST_CODE = 1;
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
