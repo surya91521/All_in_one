@@ -17,6 +17,7 @@
         <entry key="app/src/main/res/layout/activity_finger_print_manager.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_key_gen_param_biometric.xml" value="0.23324275362318841" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_example.xml" value="0.2368659420289855" />
       </map>
     </option>
   </component>
